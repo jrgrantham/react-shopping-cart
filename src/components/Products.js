@@ -8,9 +8,9 @@ const Products = () => {
 	const { products, addItem } = useContext(ProductContext)
 	return (
 		<div className="products-container">
-			{products.map(product => (
+			{products.map((product, index) => (
 				<Product
-					key={product.id}
+					key={`${product.id} ${index}`}
 					product={product}
 					addItem={addItem}
 				/>
